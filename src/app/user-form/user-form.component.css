@@ -1,0 +1,90 @@
+
+h1{
+    font-size: 35px;
+}
+
+
+.textoExplicacion{
+    margin:auto;
+    padding: 10px 40px 10px 40px;
+    font-size: 18px;
+} 
+
+.divExplicacion{
+    padding: 5px;
+    border: 1px #000000 solid;
+}
+
+.divFecha{
+
+}
+
+.textoFecha{
+    margin: auto;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+}
+
+
+.formulario{
+    padding-top: 20px;
+}
+
+.form-group{
+    padding-top: 10px;
+}
+
+.divSexo{
+    padding-top: 10px;
+    height: 100px;
+}
+
+.selectSexo{
+    height: 50px;
+}
+
+
+.divResidencia{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #000000 1px solid;
+    padding: 10px;
+}
+
+.divDepartamento{
+    margin: auto;
+    padding: 5px;
+}
+
+.divMunicipio{
+    margin: auto;
+    padding: 5px;
+}
+
+
+.divEstrato{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #000000 1px solid;
+    padding: 10px;
+}
+
+
+
+.divLugarTrabajo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #000000 1px solid;
+    padding: 10px;
+}
+
+
+.divContratoHoras{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #000000 1px solid;
+    padding: 10px; 
+}
+
+
+

@@ -1,0 +1,282 @@
+<div class="jumbotron py-3 col-md-12">
+    <h1 class="display-4 text-center"> Formato de Datos Generales </h1>
+</div>
+
+<div class="row">
+    <div class=" divExplicacion col-md-10">
+        <h3 class="text-center textoExplicacion">Para diligenciar este formulario es necesario seguir las indicaciones
+            de acuerdo
+            al campo a llenar, sólo debe pasar el mouse por cada pregunta a llenar y él te muestra la información del
+            campo a llenar.
+        </h3>
+    </div>
+    <div class=" divFecha col-md-2">
+        <h3 class="textoFecha text-center">La fecha va aqui</h3>
+    </div>
+</div>
+
+
+<form novalidate autocomplete="off" class="formulario">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label>Fecha de Aplicación</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Security Code" name="securityCode"
+                required maxlength="3" minlength="3">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Número de Identificación del Correspondiente</label>
+            <input type="text" class="form-control form-control-lg" placeholder="MM/YY" name="expirationDate" required
+                maxlength="5" minlength="5">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>1. Nombre Completo</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName" required>
+    </div>
+
+    <div class="row">
+        <div class=" form-group divSexo col-md-6">
+            <label>2. Sexo</label>
+            <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg" required>
+                <option disabled value="" selected>Seleccionar</option>
+                <option>Femenino</option>
+                <option>Masculino</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>3. Fecha de Nacimiento </label> <br>
+            <input type="date" id="start" name="trip-start" class="form-control form-control-lg" value="2018-07-22"
+                min="1930-01-01" max="2002-01-01" value="">
+        </div>
+    </div>
+
+
+    <div class=" form-group divEstadoCivil col-md-12">
+        <label>4. Estado Civil</label>
+        <select name="sexo" class="selectEstadoCivil col-md-12 form-control form-control-lg" required>
+            <option disabled value="" selected>Seleccionar</option>
+            <option>Soltero</option>
+            <option>Casado</option>
+
+        </select>
+    </div>
+
+    <div class="form-group divEstudio col-md-12">
+        <label>5. Último grado de estudios que alcanzó</label>
+        <select name="sexo" class="selectEstudio col-md-12 form-control form-control-lg" required>
+            <option disabled value="" selected>Seleccionar</option>
+            <option>Primaria</option>
+            <option>Bachiller</option>
+            <option>Técnico</option>
+            <option>Tecnólogo</option>
+            <option>Ingeniería</option>
+            <option>Hayley</option>
+        </select>
+    </div>
+
+
+    <div class="row divResidencia form-group ">
+        <label style="padding-bottom: 5px;">6. Lugar de residencia actual</label>
+        <div class="form-group col-md-6 divDepartamento">
+            <label>Departamento</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
+                required>
+        </div>
+        <div class="form-group col-md-6 divMunicipio">
+            <label>Ciudad/Municipio</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
+                required>
+        </div>
+    </div>
+
+
+    <div class="row divEstrato form-group">
+        <label style="padding-bottom: 5px;">8. Seleccione y marque el estrato de los servicios públicos de su
+            vivienda</label>
+        <div class="form-check col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato1" />
+            <label class="form-check-label" for="estrato1"> Estrato 1 </label>
+        </div>
+
+        <div class="form-check col-md-4 ">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato2" checked />
+            <label class="form-check-label" for="estrato2"> Estrato 2 </label>
+        </div>
+
+        <div class="form-check col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato3" />
+            <label class="form-check-label" for="estrato3"> Estrato 3 </label>
+        </div>
+
+        <div class="form-check col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato4" />
+            <label class="form-check-label" for="estrato4"> Estrato 4 </label>
+        </div>
+
+        <div class="form-check col-md-4 ">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato5" checked />
+            <label class="form-check-label" for="estrato5"> Estrato 5 </label>
+        </div>
+
+        <div class="form-check col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato6" />
+            <label class="form-check-label" for="estrato6"> Estrato 6 </label>
+        </div>
+
+
+        <div class="form-check col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estratoFinca" />
+            <label class="form-check-label" for="estratoFinca"> Finca </label>
+        </div>
+
+        <div class="form-check col-md-4 ">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="estratoDesconoce" checked />
+            <label class="form-check-label" for="estratoDesconoce"> Desconoce </label>
+        </div>
+    </div>
+
+
+
+    <div class="form-group divTipoVivienda col-md-12">
+        <label>9. Tipo de vivienda</label>
+        <select name="sexo" class="selectTipoVivienda col-md-12 form-control form-control-lg" required>
+            <option disabled selected>Seleccionar</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+        </select>
+    </div>
+
+    <div class="form-group divDepEconomicos col-md-12">
+        <label>10. Número de dependientes económicos de usted</label>
+        <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <option disabled selected>Seleccionar</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+    </div>
+
+
+    <div class="row divLugarTrabajo form-group ">
+        <label style="padding-bottom: 5px;">11. Lugar donde trabaja actualmente</label>
+        <div class="form-group col-md-6 divDepartamentoTrabajo">
+            <label>Departamento</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
+                required>
+        </div>
+        <div class="form-group col-md-6 divMunicipioTrabajo">
+            <label>Ciudad/Municipio</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
+                required>
+        </div>
+    </div>
+
+    <div class="form-group divDepEconomicos col-md-12">
+        <label>12. Hace cuánto trabaja en esta empresa</label>
+        <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <option disabled selected>Seleccionar</option>
+            <option>Menos de un año</option>
+            <option>1 a 2 Años</option>
+            <option>3 a 4 Años</option>
+            <option>5 a 6 Años</option>
+            <option>7 a 8 Años</option>
+            <option>9 a más años</option>
+        </select>
+    </div>
+
+
+    <div class="form-group divCargo">
+        <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cargo" required>
+    </div>
+
+
+    <div class="divCargo2 form-group">
+        <label style="padding-bottom: 5px;">14. Seleccione el tipo de cargo que más se asemeja al que desempeña</label>
+        <select name="sexo" class="selectCargo2 col-md-12 form-control form-control-lg" required>
+            <option disabled selected>Seleccionar</option>
+            <option>Jefatura, tiene personal a su cargo</option>
+            <option>Profesional, analista, técnico o tecnólogo</option>
+            <option>Auxiliar, asistente administrativo, asistente técnico</option>
+            <option>Operario, operador, ayudante, servicios generales</option>
+        </select>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group divDepEconomicos col-md-6">
+            <label>15. Hace cuánto años desempeña este cargo u oficio en la empresa</label>
+            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <option disabled selected>Seleccionar</option>
+                <option>Menos de un año</option>
+                <option>1 a 2 Años</option>
+                <option>3 a 4 Años</option>
+                <option>5 a 6 Años</option>
+                <option>7 a 8 Años</option>
+                <option>9 a más años</option>
+            </select>
+        </div>
+
+        <div class="form-group divDepartTrab col-md-6">
+            <label>16. Nombre departamento/área donde trabaja</label>
+            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <option disabled selected>Seleccionar</option>
+                <option>Finanzas</option>
+                <option>Producción</option>
+                <option>Administración</option>
+                <option>Sistemas</option>
+                <option>Contabilidad</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="row divContratoHoras form-group ">
+        <div class="form-group divDepEconomicos col-md-6">
+            <label>17. Seleccione el tipo de contrato establecido con la empresa</label>
+            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <option disabled selected>Seleccionar</option>
+                <option>Aprendiz</option>
+                <option>Temporal</option>
+                <option>Fijo</option>
+            </select>
+        </div>
+
+        <div class="form-group divDepartTrab col-md-6">
+            <label>18. Indique la cantidad de horas establecidas</label>
+            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <option disabled selected>Seleccionar</option>
+                <option>6 horas</option>
+                <option>7 horas</option>
+                <option>8 horas</option>
+                <option>9 horas</option>
+                <option>10 horas</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group divDepartTrab col-md-12">
+        <label>19. Indique la cantidad de </label>
+        <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <option disabled selected>Seleccionar</option>
+            <option>6 horas</option>
+            <option>7 horas</option>
+            <option>8 horas</option>
+            <option>9 horas</option>
+            <option>10 horas</option>
+        </select>
+    </div>
+
+    <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
+        <button class="btn btn-info btn-lg btn-block col-md-12" type="submit">
+            Submit
+        </button>
+    </div>
+
+</form>
