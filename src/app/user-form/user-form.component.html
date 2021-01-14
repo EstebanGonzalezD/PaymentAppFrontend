@@ -1,6 +1,5 @@
 <div class="container">
 
-
     <div class="jumbotron py-3 col-md-12">
         <h1 class="display-4 text-center"> Formato de Datos Generales </h1>
     </div>
@@ -21,31 +20,32 @@
     </div>
 
 
-    <form novalidate autocomplete="off" class="formulario">
+    <form novalidate autocomplete="off" class="formulario" #form="ngForm" (submit)="onSubmit(form)">
         <div class="row">
             <div class="form-group col-md-6">
                 <label>Fecha de Aplicación</label>
-                <input type="password" class="form-control form-control-lg" placeholder="Security Code"
-                    name="securityCode" required maxlength="3" minlength="3">
+                <input type="date" class="form-control form-control-lg" placeholder="Fecha de Aplicacion"
+                    name="fechaAplicacion" required maxlength="20" minlength="20" #fechaAplicacion="ngModel"
+                    [(ngModel)]="service.formData.fechaAplicacion">
             </div>
 
             <div class="form-group col-md-6">
-                <label>Número de Identificación del Correspondiente</label>
-                <input type="text" class="form-control form-control-lg" placeholder="MM/YY" name="expirationDate"
-                    required maxlength="5" minlength="5">
+                <!-- <label>Número de Identificación del Correspondiente</label>-->
+                <input type="hidden" class="form-control form-control-lg" placeholder="MM/YY" name="expirationDate"
+                    maxlength="5" minlength="5">
             </div>
         </div>
 
         <div class="form-group">
             <label>1. Nombre Completo</label>
-            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
-                required>
+            <input type="text" class="form-control form-control-lg" placeholder="" name="nombreCompleto" required
+                #nombreCompleto="ngModel" [(ngModel)]="service.formData.nombreCompleto">
         </div>
 
         <div class="row">
             <div class=" form-group divSexo col-md-6">
                 <label>2. Sexo</label>
-                <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg" required>
+                <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg">
                     <option disabled value="" selected>Seleccionar</option>
                     <option>Femenino</option>
                     <option>Masculino</option>
@@ -62,7 +62,8 @@
 
         <div class=" form-group divEstadoCivil col-md-12">
             <label>4. Estado Civil</label>
-            <select name="sexo" class="selectEstadoCivil col-md-12 form-control form-control-lg" required>
+            <select name="estadoCivil" class="selectEstadoCivil col-md-12 form-control form-control-lg" required
+                #estadoCivil="ngModel" [(ngModel)]="service.formData.estadoCivil">
                 <option disabled value="" selected>Seleccionar</option>
                 <option>Soltero</option>
                 <option>Casado</option>
@@ -72,7 +73,8 @@
 
         <div class="form-group divEstudio col-md-12">
             <label>5. Último grado de estudios que alcanzó</label>
-            <select name="sexo" class="selectEstudio col-md-12 form-control form-control-lg" required>
+            <select name="estadoCivil" class="selectEstudio col-md-12 form-control form-control-lg" required
+                #estadoCivil="ngModel" [(ngModel)]="service.formData.nivelDeEstudios">
                 <option disabled value="" selected>Seleccionar</option>
                 <option>Primaria</option>
                 <option>Bachiller</option>
@@ -88,13 +90,13 @@
             <label style="padding-bottom: 5px;">6. Lugar de residencia actual</label>
             <div class="form-group col-md-6 divDepartamento">
                 <label>Departamento</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
-                    required>
+                <input type="text" class="form-control form-control-lg" placeholder="" name="departamentoResidencia"
+                    required #departamentoResidencia="ngModel" [(ngModel)]="service.formData.departamentoResidencia">
             </div>
             <div class="form-group col-md-6 divMunicipio">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
-                    required>
+                <input type="text" class="form-control form-control-lg" placeholder="" name="ciudadTrabajo" required
+                    #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo ">
             </div>
         </div>
 
@@ -148,7 +150,8 @@
 
         <div class="form-group divTipoVivienda col-md-12">
             <label>9. Tipo de vivienda</label>
-            <select name="sexo" class="selectTipoVivienda col-md-12 form-control form-control-lg" required>
+            <select name="tipoVivienda" class="selectTipoVivienda col-md-12 form-control form-control-lg" required
+                #tipoVivienda="ngModel" [(ngModel)]="service.formData.tipoVivienda">
                 <option disabled selected>Seleccionar</option>
                 <option>Casa</option>
                 <option>Apartamento</option>
@@ -157,7 +160,8 @@
 
         <div class="form-group divDepEconomicos col-md-12">
             <label>10. Número de dependientes económicos de usted</label>
-            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <select name="numeroDependientes" class="selectDepEconomicos col-md-12 form-control form-control-lg"
+                required #numeroDependientes="ngModel" [(ngModel)]="service.formData.numeroDependientes">
                 <option disabled selected>Seleccionar</option>
                 <option>1</option>
                 <option>2</option>
@@ -173,19 +177,21 @@
             <label style="padding-bottom: 5px;">11. Lugar donde trabaja actualmente</label>
             <div class="form-group col-md-6 divDepartamentoTrabajo">
                 <label>Departamento</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
-                    required>
+                <input type="text" class="form-control form-control-lg" placeholder="Departamento"
+                    name="departamentoTrabajo" required #departamentoTrabajo="ngModel"
+                    [(ngModel)]="service.formData.departamentoTrabajo">
             </div>
             <div class="form-group col-md-6 divMunicipioTrabajo">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cardOwnerName"
-                    required>
+                <input type="text" class="form-control form-control-lg" placeholder="Ciudad" name="ciudadTrabajo"
+                    required #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo">
             </div>
         </div>
 
         <div class="form-group divDepEconomicos col-md-12">
             <label>12. Hace cuánto trabaja en esta empresa</label>
-            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <select name="tiempoEmpresa" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+                #tiempoEmpresa="ngModel" [(ngModel)]="service.formData.tiempoEmpresa">
                 <option disabled selected>Seleccionar</option>
                 <option>Menos de un año</option>
                 <option>1 a 2 Años</option>
@@ -199,19 +205,21 @@
 
         <div class="form-group divCargo">
             <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
-            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cargo" required>
+            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cargoActual" required
+                #cargoActual="ngModel" [(ngModel)]="service.formData.cargoActual">
         </div>
 
 
         <div class="divCargo2 form-group">
             <label style="padding-bottom: 5px;">14. Seleccione el tipo de cargo que más se asemeja al que
                 desempeña</label>
-            <select name="sexo" class="selectCargo2 col-md-12 form-control form-control-lg" required>
+            <select name="tipoCargo" class="selectCargo2 col-md-12 form-control form-control-lg" required
+                #tipoCargo="ngModel" [(ngModel)]="service.formData.tipoCargo">
                 <option disabled selected>Seleccionar</option>
-                <option>Jefatura, tiene personal a su cargo</option>
-                <option>Profesional, analista, técnico o tecnólogo</option>
-                <option>Auxiliar, asistente administrativo, asistente técnico</option>
-                <option>Operario, operador, ayudante, servicios generales</option>
+                <option>Jefatura</option>
+                <option>Profesional</option>
+                <option>Auxiliar</option>
+                <option>Operario</option>
             </select>
         </div>
 
@@ -219,7 +227,8 @@
         <div class="row">
             <div class="form-group divDepEconomicos col-md-6">
                 <label>15. Hace cuánto años desempeña este cargo u oficio en la empresa</label>
-                <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <select name="experiencia" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+                    #experiencia="ngModel" [(ngModel)]="service.formData.experiencia">
                     <option disabled selected>Seleccionar</option>
                     <option>Menos de un año</option>
                     <option>1 a 2 Años</option>
@@ -232,7 +241,8 @@
 
             <div class="form-group divDepartTrab col-md-6">
                 <label>16. Nombre departamento/área donde trabaja</label>
-                <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <select name="areaTrabajo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+                    #areaTrabajo="ngModel" [(ngModel)]="service.formData.areaTrabajo">
                     <option disabled selected>Seleccionar</option>
                     <option>Finanzas</option>
                     <option>Producción</option>
@@ -247,7 +257,8 @@
         <div class="row divContratoHoras form-group ">
             <div class="form-group divDepEconomicos col-md-6">
                 <label>17. Seleccione el tipo de contrato establecido con la empresa</label>
-                <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <select name="tipoContrato" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+                    #tipoContrato="ngModel" [(ngModel)]="service.formData.tipoContrato">
                     <option disabled selected>Seleccionar</option>
                     <option>Aprendiz</option>
                     <option>Temporal</option>
@@ -257,24 +268,28 @@
 
             <div class="form-group divDepartTrab col-md-6">
                 <label>18. Indique la cantidad de horas establecidas</label>
-                <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+                <select name="horasLaboradas" class="selectDepEconomicos col-md-12 form-control form-control-lg"
+                    required #horasLaboradas="ngModel" [(ngModel)]="service.formData.horasLaboradas">
                     <option disabled selected>Seleccionar</option>
-                    <option>6 horas</option>
-                    <option>7 horas</option>
-                    <option>8 horas</option>
-                    <option>9 horas</option>
-                    <option>10 horas</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group divDepartTrab col-md-12">
-            <label>19. Indique la cantidad de pago</label>
-            <select name="sexo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required>
+            <label>19. Indique la cantidad de </label>
+            <select name="tipoPago" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+                #tipoPago="ngModel" [(ngModel)]="service.formData.tipoPago">
                 <option disabled selected>Seleccionar</option>
-                <option>Fijo</option>
-                <option>Parte fija y otra variable</option>
-                <option>Variable</option>
+                <option>6 horas</option>
+                <option>7 horas</option>
+                <option>8 horas</option>
+                <option>9 horas</option>
+                <option>10 horas</option>
             </select>
         </div>
 
@@ -283,5 +298,6 @@
                 Submit
             </button>
         </div>
+
     </form>
 </div>
