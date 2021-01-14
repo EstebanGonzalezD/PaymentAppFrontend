@@ -1,27 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
+
+import { FormsModule } from '@angular/forms';
+import { ToastRef, ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule, Route } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
-
-import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { CfactoresExtralaboralesComponent } from "./cfactores-extralaborales/cfactores-extralaborales.component";
+import {CfactoresExtralaboralesComponent } from "./cfactores-extralaborales/cfactores-extralaborales.component";
+
 
 const routes: Route[] = [
+
   { path: 'datosGenerales', component: UserFormComponent },
   { path: 'UfactoresExtralaborales', component: CfactoresExtralaboralesComponent }
+
 ];
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserFormComponent
+    UserFormComponent,
+    CfactoresExtralaboralesComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AppRoutingModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
