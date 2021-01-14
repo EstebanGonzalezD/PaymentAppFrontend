@@ -1,0 +1,21 @@
+
+
+
+
+.pregForm1{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.cabeceraTabla{
+    text-align: center;
+}
+
+td{
+    padding-top: 12px;
+    text-align: center;
+}
+
+th { 
+    padding-top: 12px;
+}
