@@ -1,16 +1,14 @@
 /*Tamaño contenedor main*/
-.contenedor{
+
+.contenedor {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-
 }
 
-
-
-
 /* Estilos de la barra de navegacion*/
-.navbar{
+
+.navbar {
     text-align: center;
     visibility: hidden;
     width: 90%;
@@ -18,68 +16,70 @@
     margin-right: 5%;
 }
 
-.sNav{
-    margin-left: 12px;
+.sNav {
+    padding-left: 60px;
 }
 
-/*.csNav{
-
-}*/
-
-.avNav{
-    margin-left: 15px;
+.csNav {
+    padding-left: 60px;
 }
 
-.cnNav{
-   margin-left: 15px;
+.avNav {
+    padding-left: 60px;
 }
 
-.iNav{
-    text-align: left;
+.cnNav {
+    padding-left: 80px;
+}
+
+.nNav {
+    padding-left: 70px;
+}
+
+.iNav {
+    padding-left: 45px;
     margin-left: 0px;
 }
 
-.top-nav-collapse{
+.top-nav-collapse {
     visibility: visible;
 }
 
 /*Estilos del thead de la tabla*/
-.cabeceraTabla{
-    text-align: center;
-}
 
-.cabeceraTabla2{
-    padding-top: 50px;
-    margin-top: 50px;
+.cabeceraTabla {
     text-align: center;
+    background-color: white;
 }
 
 /*Estilos de las preguntas*/
-.pregForm1{
+
+.pregForm1 {
     text-decoration: none;
     font-weight: normal;
 }
 
-.enunciado2{
+.enunciado2 {
     margin-top: 20px;
     text-align: center;
     padding-top: 20px;
 }
 
 /*Estilos de fuentes y tamaños*/
-td{
+
+td {
     padding-top: 12px;
     text-align: center;
 }
 
-th { 
+th {
     padding-top: 12px;
 }
 
-h1{
+h1 {
     font-size: 20px;
 }
 
-h3{
+h3 {
     font-size: 15px;
 }
