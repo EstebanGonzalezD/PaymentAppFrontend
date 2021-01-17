@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { GeneralData } from 'src/app/shared/general-data.model';
 import { GeneralDataService } from 'src/app/shared/general-data.service';
+import { GradoEstudio, Sexo, EstadoCivil, TipoVivienda, NumeroDependientes, TiempoEmpresa, Cargo, AreaTrabajo, TipoContrato, HorasEstablecidas} from "../../assets/listas";
 
 @Component({
   selector: 'app-user-form',
@@ -10,6 +11,19 @@ import { GeneralDataService } from 'src/app/shared/general-data.service';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
+
+  GradoEstudio:string[] = GradoEstudio;
+  Sexo:string[] = Sexo;
+  EstadoCivil:string[] = EstadoCivil;
+  TipoVivienda:string[] = TipoVivienda;
+  NumeroDependientes:string[] = NumeroDependientes;
+  TiempoEmpresa:string[]= TiempoEmpresa;
+  Cargo:string[]=Cargo;
+  AreaTrabajo:string[]=AreaTrabajo;
+  TipoContrato:string[]=TipoContrato;
+  HorasEstablecidas:string[]= HorasEstablecidas;
+
+
 
   constructor(public service: GeneralDataService, private toastr:ToastrService) { }
 
@@ -35,6 +49,7 @@ export class UserFormComponent implements OnInit {
     form.form.reset();
     this.service.formData = new GeneralData();
   }
+
 
 
  

@@ -47,8 +47,7 @@
                 <label>2. Sexo</label>
                 <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg">
                     <option disabled value="" selected>Seleccionar</option>
-                    <option>Femenino</option>
-                    <option>Masculino</option>
+                    <option *ngFor="let sex of Sexo">{{sex}}</option>
                 </select>
             </div>
 
@@ -65,9 +64,7 @@
             <select name="estadoCivil" class="selectEstadoCivil col-md-12 form-control form-control-lg" required
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.estadoCivil">
                 <option disabled value="" selected>Seleccionar</option>
-                <option>Soltero</option>
-                <option>Casado</option>
-
+                <option *ngFor="let estado of EstadoCivil">{{estado}}</option>
             </select>
         </div>
 
@@ -76,12 +73,7 @@
             <select name="estadoCivil" class="selectEstudio col-md-12 form-control form-control-lg" required
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.nivelDeEstudios">
                 <option disabled value="" selected>Seleccionar</option>
-                <option>Primaria</option>
-                <option>Bachiller</option>
-                <option>Técnico</option>
-                <option>Tecnólogo</option>
-                <option>Ingeniería</option>
-                <option>Hayley</option>
+                <option *ngFor="let estudio of GradoEstudio">{{estudio}}</option>
             </select>
         </div>
 
@@ -153,8 +145,7 @@
             <select name="tipoVivienda" class="selectTipoVivienda col-md-12 form-control form-control-lg" required
                 #tipoVivienda="ngModel" [(ngModel)]="service.formData.tipoVivienda">
                 <option disabled selected>Seleccionar</option>
-                <option>Casa</option>
-                <option>Apartamento</option>
+                <option *ngFor="let tipoviv of TipoVivienda">{{tipoviv}}</option>
             </select>
         </div>
 
@@ -163,12 +154,7 @@
             <select name="numeroDependientes" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                 required #numeroDependientes="ngModel" [(ngModel)]="service.formData.numeroDependientes">
                 <option disabled selected>Seleccionar</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
+                <option *ngFor="let numDependientes of NumeroDependientes">{{numDependientes}}</option>
             </select>
         </div>
 
@@ -177,13 +163,13 @@
             <label style="padding-bottom: 5px;">11. Lugar donde trabaja actualmente</label>
             <div class="form-group col-md-6 divDepartamentoTrabajo">
                 <label>Departamento</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Departamento"
+                <input type="text" class="form-control form-control-lg"
                     name="departamentoTrabajo" required #departamentoTrabajo="ngModel"
                     [(ngModel)]="service.formData.departamentoTrabajo">
             </div>
             <div class="form-group col-md-6 divMunicipioTrabajo">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" placeholder="Ciudad" name="ciudadTrabajo"
+                <input type="text" class="form-control form-control-lg" name="ciudadTrabajo"
                     required #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo">
             </div>
         </div>
@@ -193,19 +179,14 @@
             <select name="tiempoEmpresa" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tiempoEmpresa="ngModel" [(ngModel)]="service.formData.tiempoEmpresa">
                 <option disabled selected>Seleccionar</option>
-                <option>Menos de un año</option>
-                <option>1 a 2 Años</option>
-                <option>3 a 4 Años</option>
-                <option>5 a 6 Años</option>
-                <option>7 a 8 Años</option>
-                <option>9 a más años</option>
+                <option *ngFor="let Tiempo of TiempoEmpresa">{{Tiempo}}</option>
             </select>
         </div>
 
 
         <div class="form-group divCargo">
             <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
-            <input type="text" class="form-control form-control-lg" placeholder="Full Name" name="cargoActual" required
+            <input type="text" class="form-control form-control-lg" name="cargoActual" required
                 #cargoActual="ngModel" [(ngModel)]="service.formData.cargoActual">
         </div>
 
@@ -216,10 +197,7 @@
             <select name="tipoCargo" class="selectCargo2 col-md-12 form-control form-control-lg" required
                 #tipoCargo="ngModel" [(ngModel)]="service.formData.tipoCargo">
                 <option disabled selected>Seleccionar</option>
-                <option>Jefatura</option>
-                <option>Profesional</option>
-                <option>Auxiliar</option>
-                <option>Operario</option>
+                <option *ngFor="let carg of Cargo">{{carg}}</option>
             </select>
         </div>
 
@@ -230,12 +208,7 @@
                 <select name="experiencia" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #experiencia="ngModel" [(ngModel)]="service.formData.experiencia">
                     <option disabled selected>Seleccionar</option>
-                    <option>Menos de un año</option>
-                    <option>1 a 2 Años</option>
-                    <option>3 a 4 Años</option>
-                    <option>5 a 6 Años</option>
-                    <option>7 a 8 Años</option>
-                    <option>9 a más años</option>
+                    <option *ngFor="let Tiempo of TiempoEmpresa">{{Tiempo}}</option>
                 </select>
             </div>
 
@@ -244,11 +217,7 @@
                 <select name="areaTrabajo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #areaTrabajo="ngModel" [(ngModel)]="service.formData.areaTrabajo">
                     <option disabled selected>Seleccionar</option>
-                    <option>Finanzas</option>
-                    <option>Producción</option>
-                    <option>Administración</option>
-                    <option>Sistemas</option>
-                    <option>Contabilidad</option>
+                    <option *ngFor="let Area of AreaTrabajo">{{Area}}</option>
                 </select>
             </div>
         </div>
@@ -260,9 +229,7 @@
                 <select name="tipoContrato" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #tipoContrato="ngModel" [(ngModel)]="service.formData.tipoContrato">
                     <option disabled selected>Seleccionar</option>
-                    <option>Aprendiz</option>
-                    <option>Temporal</option>
-                    <option>Fijo</option>
+                    <option *ngFor="let Contrato of TipoContrato">{{Contrato}}</option>
                 </select>
             </div>
 
@@ -271,25 +238,17 @@
                 <select name="horasLaboradas" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                     required #horasLaboradas="ngModel" [(ngModel)]="service.formData.horasLaboradas">
                     <option disabled selected>Seleccionar</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                    <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
                 </select>
             </div>
         </div>
-
+        
         <div class="form-group divDepartTrab col-md-12">
             <label>19. Indique la cantidad de </label>
             <select name="tipoPago" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tipoPago="ngModel" [(ngModel)]="service.formData.tipoPago">
                 <option disabled selected>Seleccionar</option>
-                <option>6 horas</option>
-                <option>7 horas</option>
-                <option>8 horas</option>
-                <option>9 horas</option>
-                <option>10 horas</option>
+                <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
             </select>
         </div>
 
