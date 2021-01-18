@@ -30,5 +30,9 @@ export class FormaAComponent implements OnInit {
     this.varMostrar2=false;
   }
 
+  scroll():void{
+    window.scroll(0,0);
+  }
+
 
 }

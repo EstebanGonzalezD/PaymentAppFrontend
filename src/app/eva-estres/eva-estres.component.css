@@ -1,0 +1,74 @@
+/*Tamaño contenedor main*/
+.contenedor{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+
+
+
+/* Estilos de la barra de navegacion*/
+.navbar{
+    text-align: center;
+    visibility: hidden;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.sNav{
+    margin-left: 12px;
+}
+
+/*.csNav{
+
+}*/
+
+.avNav{
+    margin-left: 15px;
+}
+
+.cnNav{
+   margin-left: 15px;
+}
+
+.iNav{
+    text-align: left;
+    margin-left: 0px;
+}
+
+.top-nav-collapse{
+    visibility: visible;
+}
+
+/*Estilos del thead de la tabla*/
+.cabeceraTabla{
+    text-align: center;
+}
+
+/*Estilos de las preguntas*/
+.pregForm1{
+    text-decoration: none;
+    font-weight: normal;
+}
+
+
+/*Estilos de fuentes y tamaños*/
+td{
+    padding-top: 12px;
+    text-align: center;
+}
+
+th { 
+    padding-top: 12px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 15px;
+}

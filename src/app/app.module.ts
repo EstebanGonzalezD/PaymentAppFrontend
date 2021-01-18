@@ -11,13 +11,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserFormComponent } from './user-form/user-form.component';
 import {CfactoresExtralaboralesComponent } from "./cfactores-extralaborales/cfactores-extralaborales.component";
 import { FormaAComponent } from './forma-a/forma-a.component';
+import { FormaBComponent } from './forma-b/forma-b.component';
+import { EvaEstresComponent } from './eva-estres/eva-estres.component';
 
 
 const routes: Route[] = [
 
   { path: 'datosGenerales', component: UserFormComponent },
   { path: 'UfactoresExtralaborales', component: CfactoresExtralaboralesComponent },
-  { path: 'formaA', component: FormaAComponent }
+  { path: 'formaA', component: FormaAComponent},
+  { path: 'formaB', component: FormaBComponent},
+  { path: 'evaEstres', component: EvaEstresComponent}
 ];
 
 
@@ -26,7 +30,9 @@ const routes: Route[] = [
     AppComponent,
     UserFormComponent,
     CfactoresExtralaboralesComponent,
-    FormaAComponent
+    FormaAComponent,
+    FormaBComponent,
+    EvaEstresComponent
   ],
   imports: [
     BrowserModule,

@@ -59,7 +59,7 @@
         </div>
 
 
-        <div class=" form-group divEstadoCivil col-md-12">
+        <div class="row form-group divEstadoCivil col-md-12">
             <label>4. Estado Civil</label>
             <select name="estadoCivil" class="selectEstadoCivil col-md-12 form-control form-control-lg" required
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.estadoCivil">
@@ -68,7 +68,7 @@
             </select>
         </div>
 
-        <div class="form-group divEstudio col-md-12">
+        <div class="row form-group divEstudio col-md-12">
             <label>5. Último grado de estudios que alcanzó</label>
             <select name="estadoCivil" class="selectEstudio col-md-12 form-control form-control-lg" required
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.nivelDeEstudios">
@@ -78,7 +78,7 @@
         </div>
 
 
-        <div class="row divResidencia form-group ">
+        <div class="row form-group divEstadoCivil col-md-12 ">
             <label style="padding-bottom: 5px;">6. Lugar de residencia actual</label>
             <div class="form-group col-md-6 divDepartamento">
                 <label>Departamento</label>
@@ -93,7 +93,7 @@
         </div>
 
 
-        <div class="row divEstrato form-group">
+        <div class="row form-group divEstadoCivil col-md-12">
             <label style="padding-bottom: 5px;">8. Seleccione y marque el estrato de los servicios públicos de su
                 vivienda</label>
             <select name="estrato" class="selectEstrato col-md-12 form-control form-control-lg" required
@@ -105,7 +105,7 @@
 
 
 
-        <div class="form-group divTipoVivienda col-md-12">
+        <div class="row  col-md-12">
             <label>9. Tipo de vivienda</label>
             <select name="tipoVivienda" class="selectTipoVivienda col-md-12 form-control form-control-lg" required
                 #tipoVivienda="ngModel" [(ngModel)]="service.formData.tipoVivienda">
@@ -114,7 +114,7 @@
             </select>
         </div>
 
-        <div class="form-group divDepEconomicos col-md-12">
+        <div class=" row form-group divDepEconomicos col-md-12">
             <label>10. Número de dependientes económicos de usted</label>
             <select name="numeroDependientes" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                 required #numeroDependientes="ngModel" [(ngModel)]="service.formData.numeroDependientes">
@@ -124,7 +124,7 @@
         </div>
 
 
-        <div class="row divLugarTrabajo form-group ">
+        <div class="row form-group divEstadoCivil col-md-12 ">
             <label style="padding-bottom: 5px;">11. Lugar donde trabaja actualmente</label>
             <div class="form-group col-md-6 divDepartamentoTrabajo">
                 <label>Departamento</label>
@@ -138,7 +138,7 @@
             </div>
         </div>
 
-        <div class="form-group divDepEconomicos col-md-12">
+        <div class="row form-group divDepEconomicos col-md-12">
             <label>12. Hace cuánto trabaja en esta empresa</label>
             <select name="tiempoEmpresa" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tiempoEmpresa="ngModel" [(ngModel)]="service.formData.tiempoEmpresa">
@@ -148,14 +148,14 @@
         </div>
 
 
-        <div class="form-group divCargo">
+        <div class="row form-group divEstadoCivil col-md-12">
             <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
             <input type="text" class="form-control form-control-lg" name="cargoActual" required #cargoActual="ngModel"
                 [(ngModel)]="service.formData.cargoActual">
         </div>
 
 
-        <div class="divCargo2 form-group">
+        <div class="row form-group divEstadoCivil col-md-12">
             <label style="padding-bottom: 5px;">14. Seleccione el tipo de cargo que más se asemeja al que
                 desempeña</label>
             <select name="tipoCargo" class="selectCargo2 col-md-12 form-control form-control-lg" required
@@ -166,7 +166,7 @@
         </div>
 
 
-        <div class="row form-group">
+        <div class="row form-group divEstadoCivil col-md-12">
             <div class="form-group divDepEconomicos col-md-6">
                 <label>15. Hace cuánto años desempeña este cargo u oficio en la empresa</label>
                 <select name="experiencia" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
@@ -187,7 +187,7 @@
         </div>
 
 
-        <div class="row divContratoHoras form-group ">
+        <div class="row form-group divEstadoCivil col-md-12 ">
             <div class="form-group divDepEconomicos col-md-6">
                 <label>17. Seleccione el tipo de contrato establecido con la empresa</label>
                 <select name="tipoContrato" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
@@ -197,7 +197,7 @@
                 </select>
             </div>
 
-            <div class="form-group divDepartTrab col-md-6">
+            <div class="row form-group divDepartTrab col-md-6">
                 <label>18. Indique la cantidad de horas establecidas</label>
                 <select name="horasLaboradas" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                     required #horasLaboradas="ngModel" [(ngModel)]="service.formData.horasLaboradas">
@@ -207,7 +207,7 @@
             </div>
         </div>
 
-        <div class="form-group divDepartTrab col-md-12">
+        <div class="row form-group divEstadoCivil col-md-12">
             <label>19. Indique la cantidad de horas establecidas</label>
             <select name="tipoPago" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tipoPago="ngModel" [(ngModel)]="service.formData.tipoPago">
@@ -215,6 +215,7 @@
                 <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
             </select>
         </div>
+
 
         <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
             <button class="btn btn-info btn-lg btn-block col-md-12" type="submit">

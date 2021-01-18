@@ -12,4 +12,9 @@ export class CfactoresExtralaboralesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll():void{
+    window.scroll(0,0);
+  }
+
+
 }

@@ -1,0 +1,323 @@
+<div class="contenedor" style="margin-top: 100px;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark white scrolling-navbar row">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       <h1 class="col-md-6" (click)="scroll()" style="cursor: pointer;">Evaluación del Estrés</h1>
+
+        <h3 class="col-md-1 sNav"></h3>
+        <h3 class="col-md-1 csNav"></h3>
+        <h3 class="col-md-1 avNav">Siempre</h3>
+        <h3 class="col-md-1 cnNav">Casi Siempre</h3>
+        <h3 class="col-md-1 nNav">A Veces</h3>
+        <h3 class="col-md-1 iNav">Nunca</h3>
+    </nav>
+
+
+
+    <table class="table table-bordered table-striped scrolling-navbar col-md-12" >
+        <thead class="cabeceraTabla">
+            <tr>
+                <th scope="col" class="textoInicial">Señale la casilla que indique la frecuencia con que se le han
+                    presentado los siguientes malestares en los ultimos tres meses
+                </th>
+                <th scope="col">Siempre</th>
+                <th scope="col">Casi Siempre</th>
+                <th scope="col">A Veces</th>
+                <th scope="col">Nunca</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row" class="pregForm1">1. Dolores en el cuello y espalda o tension muscular </th>
+                <td><input class="form-check-input" type="radio" name="preg1" id="siempre1" /></td>
+                <td><input class="form-check-input" type="radio" name="preg1" id="casiSiempre1" /></td>
+                <td><input class="form-check-input" type="radio" name="preg1" id="aVeces1" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg1" id="nunca1" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">2. Problemas gastrointestinales, ulcera peptica, acidez, problemas
+                    digetivos o del colon </th>
+                <td><input class="form-check-input" type="radio" name="preg2" id="siempre2" /></td>
+                <td><input class="form-check-input" type="radio" name="preg2" id="casiSiempre2" /></td>
+                <td><input class="form-check-input" type="radio" name="preg2" id="aVeces2" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg2" id="nunca2" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">3. Problemas respiratorios </th>
+                <td><input class="form-check-input" type="radio" name="preg3" id="siempre3" /></td>
+                <td><input class="form-check-input" type="radio" name="preg3" id="casiSiempre3" /></td>
+                <td><input class="form-check-input" type="radio" name="preg3" id="aVeces3" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg3" id="nunca3" /></td>
+
+            </tr>
+
+            <tr>
+                <th scope="row" class="pregForm1">4. Dolor de cabeza </th>
+                <td><input class="form-check-input" type="radio" name="preg4" id="siempre4" /></td>
+                <td><input class="form-check-input" type="radio" name="preg4" id="casiSiempre4" /></td>
+                <td><input class="form-check-input" type="radio" name="preg4" id="aVeces4" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg4" id="nunca4" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">5. Transtornos del sueño como somnolencia durante el día o desvelo en la noche </th>
+                <td><input class="form-check-input" type="radio" name="preg5" id="siempre5" /></td>
+                <td><input class="form-check-input" type="radio" name="preg5" id="casiSiempre5" /></td>
+                <td><input class="form-check-input" type="radio" name="preg5" id="aVeces5" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg5" id="nunca5" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">6. Palpitaciones en el pecho o problemas cardiacos  </th>
+                <td><input class="form-check-input" type="radio" name="preg6" id="siempre6" /></td>
+                <td><input class="form-check-input" type="radio" name="preg6" id="casiSiempre6" /></td>
+                <td><input class="form-check-input" type="radio" name="preg6" id="aVeces6" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg6" id="nunca6" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">7. Cambios fuertes del apetito  </th>
+                <td><input class="form-check-input" type="radio" name="preg7" id="siempre7" /></td>
+                <td><input class="form-check-input" type="radio" name="preg7" id="casiSiempre7" /></td>
+                <td><input class="form-check-input" type="radio" name="preg7" id="aVeces7" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg7" id="nunca7" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">8. Problemas relacionados con la funcion de los organos genitales (impotencia, frigidez)   </th>
+                <td><input class="form-check-input" type="radio" name="preg8" id="siempre8" /></td>
+                <td><input class="form-check-input" type="radio" name="preg8" id="casiSiempre8" /></td>
+                <td><input class="form-check-input" type="radio" name="preg8" id="aVeces8" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg8" id="nunca8" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">9. Dificultad en las relaciones familiares  </th>
+                <td><input class="form-check-input" type="radio" name="preg9" id="siempre9" /></td>
+                <td><input class="form-check-input" type="radio" name="preg9" id="casiSiempre9" /></td>
+                <td><input class="form-check-input" type="radio" name="preg9" id="aVeces9" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg9" id="nunca9" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">10. Dificultad para permanecer quieto o dificultad para iniciar actividades  </th>
+                <td><input class="form-check-input" type="radio" name="preg10" id="siempre10" /></td>
+                <td><input class="form-check-input" type="radio" name="preg10" id="casiSiempre10" /></td>
+                <td><input class="form-check-input" type="radio" name="preg10" id="aVeces10" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg10" id="nunca10" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">11. Dificultad en las relaciones con otras personas  </th>
+                <td><input class="form-check-input" type="radio" name="preg11" id="siempre11" /></td>
+                <td><input class="form-check-input" type="radio" name="preg11" id="casiSiempre11" /></td>
+                <td><input class="form-check-input" type="radio" name="preg11" id="aVeces11" /></td>
+                
+                <td><input class="form-check-input" type="radio" name="preg11" id="nunca11" /></td>
+                
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">12. Sensaciones de aislamiento y desinterés </th>
+                <td><input class="form-check-input" type="radio" name="preg12" id="siempre12" /></td>
+                <td><input class="form-check-input" type="radio" name="preg12" id="casiSiempre12" /></td>
+                <td><input class="form-check-input" type="radio" name="preg12" id="aVeces12" /></td>
+                
+                <td><input class="form-check-input" type="radio" name="preg12" id="nunca12" /></td>
+                
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">13. Sentimiento de sobrecarga de trabajo  </th>
+                <td><input class="form-check-input" type="radio" name="preg13" id="siempre13" /></td>
+                <td><input class="form-check-input" type="radio" name="preg13" id="casiSiempre13" /></td>
+                <td><input class="form-check-input" type="radio" name="preg13" id="aVeces13" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg13" id="nunca13" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">14. Dificultad para concentrarce, olvidos frecuentes  </th>
+                <td><input class="form-check-input" type="radio" name="preg14" id="siempre14" /></td>
+                <td><input class="form-check-input" type="radio" name="preg14" id="casiSiempre14" /></td>
+                <td><input class="form-check-input" type="radio" name="preg14" id="aVeces14" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg14" id="nunca14" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">15. Aumento en el número de accidentes de trabajo  </th>
+                <td><input class="form-check-input" type="radio" name="preg15" id="siempre15" /></td>
+                <td><input class="form-check-input" type="radio" name="preg15" id="casiSiempre15" /></td>
+                <td><input class="form-check-input" type="radio" name="preg15" id="aVeces15" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg15" id="nunca15" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">16. Sentimiento de frustración, de no haber hecho lo que se queria en la vida  </th>
+                <td><input class="form-check-input" type="radio" name="preg16" id="siempre16" /></td>
+                <td><input class="form-check-input" type="radio" name="preg16" id="casiSiempre16" /></td>
+                <td><input class="form-check-input" type="radio" name="preg16" id="aVeces16" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg16" id="nunca16" /></td>
+
+            </tr>
+
+            <tr>
+                <th scope="row" class="pregForm1">17. Cansancio, tedio o desgano  </th>
+                <td><input class="form-check-input" type="radio" name="preg17" id="siempre17" /></td>
+                <td><input class="form-check-input" type="radio" name="preg17" id="casiSiempre17" /></td>
+                <td><input class="form-check-input" type="radio" name="preg17" id="aVeces17" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg17" id="nunca17" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">18. Disminución del rendimiento en el trabajo o poca creatividad </th>
+                <td><input class="form-check-input" type="radio" name="preg18" id="siempr185" /></td>
+                <td><input class="form-check-input" type="radio" name="preg18" id="casiSiempre18" /></td>
+                <td><input class="form-check-input" type="radio" name="preg18" id="aVeces18" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg18" id="nunca18" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">19. Deseo de no asistir al trabajo </th>
+                <td><input class="form-check-input" type="radio" name="preg19" id="siempre19" /></td>
+                <td><input class="form-check-input" type="radio" name="preg19" id="casiSiempre19" /></td>
+                <td><input class="form-check-input" type="radio" name="preg19" id="aVeces19" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg19" id="nunca19" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">20. Bajo compromiso o poco interes con lo que se hace  </th>
+                <td><input class="form-check-input" type="radio" name="preg20" id="siempre20" /></td>
+                <td><input class="form-check-input" type="radio" name="preg20" id="casiSiempre20" /></td>
+                <td><input class="form-check-input" type="radio" name="preg20" id="aVeces20" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg20" id="nunca20" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">21. Dificultad para tomar decisiones </th>
+                <td><input class="form-check-input" type="radio" name="preg21" id="siempre21" /></td>
+                <td><input class="form-check-input" type="radio" name="preg21" id="casiSiempre21" /></td>
+                <td><input class="form-check-input" type="radio" name="preg21" id="aVeces21" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg21" id="nunca21" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">22. Deseo de cambiar de empleo </th>
+                <td><input class="form-check-input" type="radio" name="preg22" id="siempre22" /></td>
+                <td><input class="form-check-input" type="radio" name="preg22" id="casiSiempre22" /></td>
+                <td><input class="form-check-input" type="radio" name="preg22" id="aVeces22" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg22" id="nunca22" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">23. Sentimiento de soledad y miedo </th>
+                <td><input class="form-check-input" type="radio" name="preg23" id="siempre23" /></td>
+                <td><input class="form-check-input" type="radio" name="preg23" id="casiSiempre23" /></td>
+                <td><input class="form-check-input" type="radio" name="preg23" id="aVeces23" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg23" id="nunca23" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">24. Sentimiento de irritabilidad, actitudes y pensamientos negativos </th>
+                <td><input class="form-check-input" type="radio" name="preg24" id="siempre24" /></td>
+                <td><input class="form-check-input" type="radio" name="preg24" id="casiSiempre24" /></td>
+                <td><input class="form-check-input" type="radio" name="preg24" id="aVeces24" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg24" id="nunca24" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">25. Sentimiento de angustia, preocupacion o tristeza  </th>
+                <td><input class="form-check-input" type="radio" name="preg25" id="siempre25" /></td>
+                <td><input class="form-check-input" type="radio" name="preg25" id="casiSiempre25" /></td>
+                <td><input class="form-check-input" type="radio" name="preg25" id="aVeces25" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg25" id="nunca25" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">26. Consumo de drogas para aliviar la tensión o los nervios </th>
+                <td><input class="form-check-input" type="radio" name="preg26" id="siempre26" /></td>
+                <td><input class="form-check-input" type="radio" name="preg26" id="casiSiempre26" /></td>
+                <td><input class="form-check-input" type="radio" name="preg26" id="aVeces26" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg26" id="nunca26" /></td>
+
+            </tr>
+
+
+
+
+            <tr>
+                <th scope="row" class="pregForm1">27. Sentimientos de que "no vale nada", o "no sirve para nada" </th>
+                <td><input class="form-check-input" type="radio" name="preg27" id="siempre27" /></td>
+                <td><input class="form-check-input" type="radio" name="preg27" id="casiSiempre27" /></td>
+                <td><input class="form-check-input" type="radio" name="preg27" id="aVeces27" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg27" id="nunca27" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">28. Consumo de bebidas alcoholicas o cafe o cigarrillo </th>
+                <td><input class="form-check-input" type="radio" name="preg28" id="siempre28" /></td>
+                <td><input class="form-check-input" type="radio" name="preg28" id="casiSiempre28" /></td>
+                <td><input class="form-check-input" type="radio" name="preg28" id="aVeces28" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg28" id="nunca28" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">29. Sentimiento de que está perdiendo la razón  </th>
+                <td><input class="form-check-input" type="radio" name="preg29" id="siempre29" /></td>
+                <td><input class="form-check-input" type="radio" name="preg29" id="casiSiempre29" /></td>
+                <td><input class="form-check-input" type="radio" name="preg29" id="aVeces29" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg29" id="nunca29" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">30. Conportamientos rígidos, obstinación o terquedad  </th>
+                <td><input class="form-check-input" type="radio" name="preg30" id="siempre30" /></td>
+                <td><input class="form-check-input" type="radio" name="preg30" id="casiSiempre30" /></td>
+                <td><input class="form-check-input" type="radio" name="preg30" id="aVeces30" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg30" id="nunca30" /></td>
+
+            </tr>
+            <tr>
+                <th scope="row" class="pregForm1">31. Sensación de no poder manejar los problemas de la vida  </th>
+                <td><input class="form-check-input" type="radio" name="preg31" id="siempre31" /></td>
+                <td><input class="form-check-input" type="radio" name="preg31" id="casiSiempre31" /></td>
+                <td><input class="form-check-input" type="radio" name="preg31" id="aVeces31" /></td>
+
+                <td><input class="form-check-input" type="radio" name="preg31" id="nunca31" /></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
