@@ -47,7 +47,7 @@ h1{
 .divResidencia{
     margin-top: 20px;
     margin-bottom: 20px;
-    border: #000000 1px solid;
+
     padding: 10px;
 }
 
@@ -65,7 +65,7 @@ h1{
 .divEstrato{
     margin-top: 20px;
     margin-bottom: 20px;
-    border: #000000 1px solid;
+
     padding: 10px;
 }
 
@@ -74,7 +74,6 @@ h1{
 .divLugarTrabajo{
     margin-top: 20px;
     margin-bottom: 20px;
-    border: #000000 1px solid;
     padding: 10px;
 }
 
@@ -82,7 +81,6 @@ h1{
 .divContratoHoras{
     margin-top: 20px;
     margin-bottom: 20px;
-    border: #000000 1px solid;
     padding: 10px; 
 }
 

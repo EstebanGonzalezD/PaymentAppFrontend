@@ -96,46 +96,11 @@
         <div class="row divEstrato form-group">
             <label style="padding-bottom: 5px;">8. Seleccione y marque el estrato de los servicios públicos de su
                 vivienda</label>
-            <div class="form-check col-md-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato1" />
-                <label class="form-check-label" for="estrato1"> Estrato 1 </label>
-            </div>
-
-            <div class="form-check col-md-4 ">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato2" checked />
-                <label class="form-check-label" for="estrato2"> Estrato 2 </label>
-            </div>
-
-            <div class="form-check col-md-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato3" />
-                <label class="form-check-label" for="estrato3"> Estrato 3 </label>
-            </div>
-
-            <div class="form-check col-md-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato4" />
-                <label class="form-check-label" for="estrato4"> Estrato 4 </label>
-            </div>
-
-            <div class="form-check col-md-4 ">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato5" checked />
-                <label class="form-check-label" for="estrato5"> Estrato 5 </label>
-            </div>
-
-            <div class="form-check col-md-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estrato6" />
-                <label class="form-check-label" for="estrato6"> Estrato 6 </label>
-            </div>
-
-
-            <div class="form-check col-md-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estratoFinca" />
-                <label class="form-check-label" for="estratoFinca"> Finca </label>
-            </div>
-
-            <div class="form-check col-md-4 ">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="estratoDesconoce" checked />
-                <label class="form-check-label" for="estratoDesconoce"> Desconoce </label>
-            </div>
+            <select name="estrato" class="selectEstrato col-md-12 form-control form-control-lg" required
+                #estrato="ngModel" [(ngModel)]="service.formData.estrato">
+                <option disabled value="" selected>Seleccionar</option>
+                <option *ngFor="let estrat of Estrato">{{estrat}}</option>
+            </select>
         </div>
 
 
@@ -144,7 +109,7 @@
             <label>9. Tipo de vivienda</label>
             <select name="tipoVivienda" class="selectTipoVivienda col-md-12 form-control form-control-lg" required
                 #tipoVivienda="ngModel" [(ngModel)]="service.formData.tipoVivienda">
-                <option disabled selected>Seleccionar</option>
+                <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let tipoviv of TipoVivienda">{{tipoviv}}</option>
             </select>
         </div>
@@ -153,7 +118,7 @@
             <label>10. Número de dependientes económicos de usted</label>
             <select name="numeroDependientes" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                 required #numeroDependientes="ngModel" [(ngModel)]="service.formData.numeroDependientes">
-                <option disabled selected>Seleccionar</option>
+                <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let numDependientes of NumeroDependientes">{{numDependientes}}</option>
             </select>
         </div>
@@ -163,14 +128,13 @@
             <label style="padding-bottom: 5px;">11. Lugar donde trabaja actualmente</label>
             <div class="form-group col-md-6 divDepartamentoTrabajo">
                 <label>Departamento</label>
-                <input type="text" class="form-control form-control-lg"
-                    name="departamentoTrabajo" required #departamentoTrabajo="ngModel"
-                    [(ngModel)]="service.formData.departamentoTrabajo">
+                <input type="text" class="form-control form-control-lg" name="departamentoTrabajo" required
+                    #departamentoTrabajo="ngModel" [(ngModel)]="service.formData.departamentoTrabajo">
             </div>
             <div class="form-group col-md-6 divMunicipioTrabajo">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" name="ciudadTrabajo"
-                    required #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo">
+                <input type="text" class="form-control form-control-lg" name="ciudadTrabajo" required
+                    #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo">
             </div>
         </div>
 
@@ -178,7 +142,7 @@
             <label>12. Hace cuánto trabaja en esta empresa</label>
             <select name="tiempoEmpresa" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tiempoEmpresa="ngModel" [(ngModel)]="service.formData.tiempoEmpresa">
-                <option disabled selected>Seleccionar</option>
+                <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let Tiempo of TiempoEmpresa">{{Tiempo}}</option>
             </select>
         </div>
@@ -186,8 +150,8 @@
 
         <div class="form-group divCargo">
             <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
-            <input type="text" class="form-control form-control-lg" name="cargoActual" required
-                #cargoActual="ngModel" [(ngModel)]="service.formData.cargoActual">
+            <input type="text" class="form-control form-control-lg" name="cargoActual" required #cargoActual="ngModel"
+                [(ngModel)]="service.formData.cargoActual">
         </div>
 
 
@@ -196,18 +160,18 @@
                 desempeña</label>
             <select name="tipoCargo" class="selectCargo2 col-md-12 form-control form-control-lg" required
                 #tipoCargo="ngModel" [(ngModel)]="service.formData.tipoCargo">
-                <option disabled selected>Seleccionar</option>
+                <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let carg of Cargo">{{carg}}</option>
             </select>
         </div>
 
 
-        <div class="row">
+        <div class="row form-group">
             <div class="form-group divDepEconomicos col-md-6">
                 <label>15. Hace cuánto años desempeña este cargo u oficio en la empresa</label>
                 <select name="experiencia" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #experiencia="ngModel" [(ngModel)]="service.formData.experiencia">
-                    <option disabled selected>Seleccionar</option>
+                    <option disabled value="" selected>Seleccionar</option>
                     <option *ngFor="let Tiempo of TiempoEmpresa">{{Tiempo}}</option>
                 </select>
             </div>
@@ -216,7 +180,7 @@
                 <label>16. Nombre departamento/área donde trabaja</label>
                 <select name="areaTrabajo" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #areaTrabajo="ngModel" [(ngModel)]="service.formData.areaTrabajo">
-                    <option disabled selected>Seleccionar</option>
+                    <option disabled value="" selected>Seleccionar</option>
                     <option *ngFor="let Area of AreaTrabajo">{{Area}}</option>
                 </select>
             </div>
@@ -228,7 +192,7 @@
                 <label>17. Seleccione el tipo de contrato establecido con la empresa</label>
                 <select name="tipoContrato" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                     #tipoContrato="ngModel" [(ngModel)]="service.formData.tipoContrato">
-                    <option disabled selected>Seleccionar</option>
+                    <option disabled value="" selected>Seleccionar</option>
                     <option *ngFor="let Contrato of TipoContrato">{{Contrato}}</option>
                 </select>
             </div>
@@ -237,17 +201,17 @@
                 <label>18. Indique la cantidad de horas establecidas</label>
                 <select name="horasLaboradas" class="selectDepEconomicos col-md-12 form-control form-control-lg"
                     required #horasLaboradas="ngModel" [(ngModel)]="service.formData.horasLaboradas">
-                    <option disabled selected>Seleccionar</option>
+                    <option disabled value="" selected>Seleccionar</option>
                     <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
                 </select>
             </div>
         </div>
-        
+
         <div class="form-group divDepartTrab col-md-12">
-            <label>19. Indique la cantidad de </label>
+            <label>19. Indique la cantidad de horas establecidas</label>
             <select name="tipoPago" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tipoPago="ngModel" [(ngModel)]="service.formData.tipoPago">
-                <option disabled selected>Seleccionar</option>
+                <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
             </select>
         </div>

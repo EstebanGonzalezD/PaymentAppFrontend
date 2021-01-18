@@ -10,3 +10,4 @@ export const Cargo:string[] = ["Jefatura", "Profesional", "Auxiliar", "Operario"
 export const AreaTrabajo:string[] = ["Finanzas","Producción","Administración","Sistemas","Contabilidad"];
 export const TipoContrato:string[] = ["Aprendiz","Temporal","Fijo"];
 export const HorasEstablecidas:string[] = ["6","7","8","9","10"];
+export const Estrato:string[] = ["1","2","3","4","5","6","7","Desconoce"];
