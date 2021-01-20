@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { GeneralData } from 'src/app/shared/general-data.model';
 import { GeneralDataService } from 'src/app/shared/general-data.service';
-import { GradoEstudio, Sexo, EstadoCivil, TipoVivienda, NumeroDependientes, TiempoEmpresa, Cargo, AreaTrabajo, TipoContrato, HorasEstablecidas, Estrato} from "../../assets/listas";
+import { GradoEstudio, Sexo, EstadoCivil, TipoVivienda, NumeroDependientes, TiempoEmpresa, Cargo, AreaTrabajo, TipoContrato, HorasEstablecidas, Estrato, TipoPago} from "../../assets/listas";
 
 @Component({
   selector: 'app-user-form',
@@ -23,7 +23,7 @@ export class UserFormComponent implements OnInit {
   TipoContrato:string[]=TipoContrato;
   HorasEstablecidas:string[]= HorasEstablecidas;
   Estrato:string[] = Estrato;
-
+  TipoPago:string[] = TipoPago;
 
   constructor(public service: GeneralDataService, private toastr:ToastrService) { }
 

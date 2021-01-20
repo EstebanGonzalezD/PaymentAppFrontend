@@ -21,6 +21,12 @@
 
 
     <form novalidate autocomplete="off" class="formulario" #form="ngForm" (submit)="onSubmit(form)">
+        <div class="form-group">
+            <label>0. Cedula</label>
+            <input type="text" class="form-control form-control-lg"  name="cedula" required
+                #cedula="ngModel" [(ngModel)]="service.formData.cedula" [class.invalid]="cedula.invalid && cedula.touched" maxlength="15" minlength="8">
+        </div>
+
         <div class="row">
             <div class="form-group col-md-6">
                 <label>Fecha de Aplicación</label>
@@ -45,7 +51,8 @@
         <div class="row">
             <div class=" form-group divSexo col-md-6">
                 <label>2. Sexo</label>
-                <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg">
+                <select name="sexo" class="selectSexo col-md-12 form-control form-control-lg" required name="sexo"
+                    #sexo="ngModel" [(ngModel)]="service.formData.sexo">
                     <option disabled value="" selected>Seleccionar</option>
                     <option *ngFor="let sex of Sexo">{{sex}}</option>
                 </select>
@@ -53,8 +60,9 @@
 
             <div class="form-group col-md-6">
                 <label>3. Fecha de Nacimiento </label> <br>
-                <input type="date" id="start" name="trip-start" class="form-control form-control-lg" value="2018-07-22"
-                    min="1930-01-01" max="2002-01-01" value="">
+                <input type="date" id="start" name="anioNacimiento" class="form-control form-control-lg"
+                    value="2018-07-22" min="1930-01-01" max="2020-01-01" value="" required #anioNacimiento="ngModel"
+                    [(ngModel)]="service.formData.anioNacimiento">
             </div>
         </div>
 
@@ -70,7 +78,7 @@
 
         <div class="row form-group divEstudio col-md-12">
             <label>5. Último grado de estudios que alcanzó</label>
-            <select name="estadoCivil" class="selectEstudio col-md-12 form-control form-control-lg" required
+            <select name="nivelDeEstudios" class="selectEstudio col-md-12 form-control form-control-lg" required
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.nivelDeEstudios">
                 <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let estudio of GradoEstudio">{{estudio}}</option>
@@ -82,13 +90,13 @@
             <label style="padding-bottom: 5px;">6. Lugar de residencia actual</label>
             <div class="form-group col-md-6 divDepartamento">
                 <label>Departamento</label>
-                <input type="text" class="form-control form-control-lg" placeholder="" name="departamentoResidencia"
-                    required #departamentoResidencia="ngModel" [(ngModel)]="service.formData.departamentoResidencia">
+                <input type="text" class="form-control form-control-lg" placeholder="" name="depaResidencia" required
+                    #depaResidencia="ngModel" [(ngModel)]="service.formData.depaResidencia">
             </div>
             <div class="form-group col-md-6 divMunicipio">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" placeholder="" name="ciudadTrabajo" required
-                    #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo ">
+                <input type="text" class="form-control form-control-lg" placeholder="" name="ciudadResidencia" required
+                    #ciudadResidencia="ngModel" [(ngModel)]="service.formData.ciudadResidencia ">
             </div>
         </div>
 
@@ -208,11 +216,11 @@
         </div>
 
         <div class="row form-group divEstadoCivil col-md-12">
-            <label>19. Indique la cantidad de horas establecidas</label>
-            <select name="tipoPago" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
+            <label>19. Indique la forma de pago establecida</label>
+            <select name="tipoPag" class="selectDepEconomicos col-md-12 form-control form-control-lg" required
                 #tipoPago="ngModel" [(ngModel)]="service.formData.tipoPago">
                 <option disabled value="" selected>Seleccionar</option>
-                <option *ngFor="let Horas of HorasEstablecidas">{{Horas}}</option>
+                <option *ngFor="let tipo of TipoPago">{{tipo}}</option>
             </select>
         </div>
 

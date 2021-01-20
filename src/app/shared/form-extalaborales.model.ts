@@ -1,0 +1,33 @@
+export class FormExtalaborales {
+  id_cuestionario:number =0;
+  cedula:number= 0;
+  pregunta_1:string = "";
+  pregunta_2:string = "";
+  pregunta_3:string = "";
+  pregunta_4:string = "";
+  pregunta_5:string = "";
+  pregunta_6:string = "";
+  pregunta_7:string = "";
+  pregunta_8:string = "";
+  pregunta_9:string = "";
+  pregunta_10:string = "";
+  pregunta_11:string = "";
+  pregunta_12:string = "";
+  pregunta_13:string = "";
+  pregunta_14:string = "";
+  pregunta_15:string = "";
+  pregunta_16:string = "";
+  pregunta_17:string = "";
+  pregunta_18:string = "";
+  pregunta_19:string = "";
+  pregunta_20:string = "";
+  pregunta_21:string = "";
+  pregunta_22:string = "";
+  pregunta_23:string = "";
+  pregunta_24:string = "";
+  pregunta_25:string = "";
+  pregunta_26:string = "";
+  pregunta_27:string = "";
+  pregunta_28:string = "";
+  pregunta_31:string = "";
+}

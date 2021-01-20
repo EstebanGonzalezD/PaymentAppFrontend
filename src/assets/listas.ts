@@ -11,3 +11,4 @@ export const AreaTrabajo:string[] = ["Finanzas","Producción","Administración",
 export const TipoContrato:string[] = ["Aprendiz","Temporal","Fijo"];
 export const HorasEstablecidas:string[] = ["6","7","8","9","10"];
 export const Estrato:string[] = ["1","2","3","4","5","6","7","Desconoce"];
+export const TipoPago:string[] = ["Fijo","Variable"];
