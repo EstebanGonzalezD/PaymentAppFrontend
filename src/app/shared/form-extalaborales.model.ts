@@ -29,5 +29,7 @@ export class FormExtalaborales {
   pregunta_26:string = "";
   pregunta_27:string = "";
   pregunta_28:string = "";
+  pregunta_29:string = "";
+  pregunta_30:string = "";
   pregunta_31:string = "";
 }

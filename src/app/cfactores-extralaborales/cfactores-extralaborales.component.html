@@ -15,6 +15,14 @@
     </nav>
 
     <form novalidate autocomplete="off" class="formulario" #form="ngForm" (submit)="onSubmit(form)">
+
+        <div class="form-group">
+            <label>0. Cedula</label>
+            <input type="text" class="form-control form-control-lg" name="cedula" required #cedula="ngModel"
+                [(ngModel)]="service.formData.cedula" [class.invalid]="cedula.invalid && cedula.touched" maxlength="10"
+                minlength="8">
+        </div>
+
         <table class="table table-bordered table-striped scrolling-navbar col-md-12">
             <thead class="cabeceraTabla">
                 <tr>
@@ -34,408 +42,408 @@
             <tbody>
                 <tr>
                     <th scope="row" class="pregForm1">1. Es facil transportarme entre mi casa y el trabajo </th>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="siempre1" value="0"
-                            #preg1="ngModel" [(ngModel)]="service.formData.preg1" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="casiSiempre1" value="1"
-                            #preg1="ngModel" [(ngModel)]="service.formData.preg1" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="algunasVeces1" value="2"
-                            #preg1="ngModel" [(ngModel)]="service.formData.preg1" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="casiNunca1" value="3"
-                            #preg1="ngModel" [(ngModel)]="service.formData.preg1" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="nunca1" value="4" #preg1="ngModel"
-                            [(ngModel)]="service.formData.preg1" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg1" id="invalido1" value="5"
-                            #preg1="ngModel" [(ngModel)]="service.formData.preg1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="siempre1" value="0"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="casiSiempre1" value="1"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="algunasVeces1" value="2"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="casiNunca1" value="3"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="nunca1" value="4"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_1" id="invalido1" value="5"
+                            #pregunta_1="ngModel" [(ngModel)]="service.formData.pregunta_1" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">2. Tengo que tomar varios medios de transporte para llegar a mi
                         lugar
                         de trabajo </th>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="siempre2" value="4"
-                            #preg2="ngModel" [(ngModel)]="service.formData.preg2" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="casiSiempre2" value="3"
-                            #preg2="ngModel" [(ngModel)]="service.formData.preg2" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="algunasVeces2" value="2"
-                            #preg2="ngModel" [(ngModel)]="service.formData.preg2" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="casiNunca2" value="1"
-                            #preg2="ngModel" [(ngModel)]="service.formData.preg2" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="nunca2" value="0" #preg2="ngModel"
-                            [(ngModel)]="service.formData.preg2" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg2" id="invalido2" value="5"
-                            #preg2="ngModel" [(ngModel)]="service.formData.preg2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="siempre2" value="4"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="casiSiempre2" value="3"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="algunasVeces2" value="2"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="casiNunca2" value="1"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="nunca2" value="0"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_2" id="invalido2" value="5"
+                            #pregunta_2="ngModel" [(ngModel)]="service.formData.pregunta_2" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">3. Paso mucho tiempo viajando de ida y regreso al trabajo </th>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="siempre3" value="4"
-                            #preg3="ngModel" [(ngModel)]="service.formData.preg3" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="casiSiempre3" value="3"
-                            #preg3="ngModel" [(ngModel)]="service.formData.preg3" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="algunasVeces3" value="2"
-                            #preg3="ngModel" [(ngModel)]="service.formData.preg3" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="casiNunca3" value="1"
-                            #preg3="ngModel" [(ngModel)]="service.formData.preg3" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="nunca3" value="0" #preg3="ngModel"
-                            [(ngModel)]="service.formData.preg3" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg3" id="invalido3" value="5"
-                            #preg3="ngModel" [(ngModel)]="service.formData.preg3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="siempre3" value="4"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="casiSiempre3" value="3"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="algunasVeces3" value="2"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="casiNunca3" value="1"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="nunca3" value="0"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_3" id="invalido3" value="5"
+                            #pregunta_3="ngModel" [(ngModel)]="service.formData.pregunta_3" required /></td>
                 </tr>
 
                 <tr>
                     <th scope="row" class="pregForm1">4. Me transporto cómodamente entre mi casa y el trabjo </th>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="siempre4" value="0"
-                            #preg4="ngModel" [(ngModel)]="service.formData.preg4" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="casiSiempre4" value="1"
-                            #preg4="ngModel" [(ngModel)]="service.formData.preg4" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="algunasVeces4" value="2"
-                            #preg4="ngModel" [(ngModel)]="service.formData.preg4" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="casiNunca4" value="3"
-                            #preg4="ngModel" [(ngModel)]="service.formData.preg4" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="nunca4" value="4" #preg4="ngModel"
-                            [(ngModel)]="service.formData.preg4" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg4" id="invalido4" value="5"
-                            #preg4="ngModel" [(ngModel)]="service.formData.preg4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="siempre4" value="0"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="casiSiempre4" value="1"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="algunasVeces4" value="2"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="casiNunca4" value="3"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="nunca4" value="4"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_4" id="invalido4" value="5"
+                            #pregunta_4="ngModel" [(ngModel)]="service.formData.pregunta_4" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">5. La zona donde vivo es segura</th>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="siempre5" value="0"
-                            #preg5="ngModel" [(ngModel)]="service.formData.preg5" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="casiSiempre5" value="1"
-                            #preg5="ngModel" [(ngModel)]="service.formData.preg5" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="algunasVeces5" value="2"
-                            #preg5="ngModel" [(ngModel)]="service.formData.preg5" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="casiNunca5" value="3"
-                            #preg5="ngModel" [(ngModel)]="service.formData.preg5" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="nunca5" value="4" #preg5="ngModel"
-                            [(ngModel)]="service.formData.preg5" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg5" id="invalido5" value="5"
-                            #preg5="ngModel" [(ngModel)]="service.formData.preg5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="siempre5" value="0"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="casiSiempre5" value="1"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="algunasVeces5" value="2"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="casiNunca5" value="3"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="nunca5" value="4"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_5" id="invalido5" value="5"
+                            #pregunta_5="ngModel" [(ngModel)]="service.formData.pregunta_5" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">6. La zona donde vivo se presentan hurtos y mucha delincuencia
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="siempre6" value="4"
-                            #preg6="ngModel" [(ngModel)]="service.formData.preg6" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="casiSiempre6" value="3"
-                            #preg6="ngModel" [(ngModel)]="service.formData.preg6" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="algunasVeces6" value="2"
-                            #preg6="ngModel" [(ngModel)]="service.formData.preg6" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="casiNunca6" value="1"
-                            #preg6="ngModel" [(ngModel)]="service.formData.preg6" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="nunca6" value="0" #preg6="ngModel"
-                            [(ngModel)]="service.formData.preg6" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg6" id="invalido6" value="5"
-                            #preg6="ngModel" [(ngModel)]="service.formData.preg6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="siempre6" value="4"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="casiSiempre6" value="3"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="algunasVeces6" value="2"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="casiNunca6" value="1"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="nunca6" value="0"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_6" id="invalido6" value="5"
+                            #pregunta_6="ngModel" [(ngModel)]="service.formData.pregunta_6" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">7. Desde donde vivo me es facil llegar al centro médico donde me
                         atienden </th>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="siempre7" value="0"
-                            #preg7="ngModel" [(ngModel)]="service.formData.preg7" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="casiSiempre7" value="1"
-                            #preg7="ngModel" [(ngModel)]="service.formData.preg7" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="algunasVeces7" value="2"
-                            #preg7="ngModel" [(ngModel)]="service.formData.preg7" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="casiNunca7" value="3"
-                            #preg7="ngModel" [(ngModel)]="service.formData.preg7" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="nunca7" value="4" #preg7="ngModel"
-                            [(ngModel)]="service.formData.preg7" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg7" id="invalido7" value="5"
-                            #preg7="ngModel" [(ngModel)]="service.formData.preg7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="siempre7" value="0"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="casiSiempre7" value="1"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="algunasVeces7" value="2"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="casiNunca7" value="3"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="nunca7" value="4"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_7" id="invalido7" value="5"
+                            #pregunta_7="ngModel" [(ngModel)]="service.formData.pregunta_7" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">8. Cerca a mi vivienda las vías están en buenas condiciones </th>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="siempre8" value="0"
-                            #preg8="ngModel" [(ngModel)]="service.formData.preg8" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="casiSiempre8" value="1"
-                            #preg8="ngModel" [(ngModel)]="service.formData.preg8" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="algunasVeces8" value="2"
-                            #preg8="ngModel" [(ngModel)]="service.formData.preg8" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="casiNunca8" value="3"
-                            #preg8="ngModel" [(ngModel)]="service.formData.preg8" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="nunca8" value="4" #preg8="ngModel"
-                            [(ngModel)]="service.formData.preg8" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg8" id="invalido8" value="5"
-                            #preg8="ngModel" [(ngModel)]="service.formData.preg8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="siempre8" value="0"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="casiSiempre8" value="1"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="algunasVeces8" value="2"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="casiNunca8" value="3"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="nunca8" value="4"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_8" id="invalido8" value="5"
+                            #pregunta_8="ngModel" [(ngModel)]="service.formData.pregunta_8" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">9. Cerca a mi vivienda encuentro fácilmente transporte </th>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="siempre9" value="0"
-                            #preg9="ngModel" [(ngModel)]="service.formData.preg9" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="casiSiempre9" value="1"
-                            #preg9="ngModel" [(ngModel)]="service.formData.preg9" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="algunasVeces9" value="2"
-                            #preg9="ngModel" [(ngModel)]="service.formData.preg9" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="casiNunca9" value="3"
-                            #preg9="ngModel" [(ngModel)]="service.formData.preg9" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="nunca9" value="4" #preg9="ngModel"
-                            [(ngModel)]="service.formData.preg9" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg9" id="invalido9" value=""
-                            #preg9="ngModel" [(ngModel)]="service.formData.preg9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="siempre9" value="0"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="casiSiempre9" value="1"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="algunasVeces9" value="2"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="casiNunca9" value="3"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="nunca9" value="4"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_9" id="invalido9" value="5"
+                            #pregunta_9="ngModel" [(ngModel)]="service.formData.pregunta_9" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">10. Las condiciones de mi vivienda son buenas </th>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="siempre10" value="0"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="casiSiempre10" value="1"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="algunasVeces10" value="2"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="casiNunca10" value="3"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="nunca10" value="4"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg10" id="invalido10" value="5"
-                            #preg10="ngModel" [(ngModel)]="service.formData.preg10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="siempre10" value="0"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="casiSiempre10" value="1"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="algunasVeces10" value="2"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="casiNunca10" value="3"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="nunca10" value="4"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_10" id="invalido10" value="5"
+                            #pregunta_10="ngModel" [(ngModel)]="service.formData.pregunta_10" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">11. En mi vivienda hasy servicios de agua y luz </th>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="siempre11" value="0"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="casiSiempre11" value="1"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="algunasVeces11" value="2"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="casiNunca11" value="3"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="nunca11" value="4"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg11" id="invalido11" value="5"
-                            #preg11="ngModel" [(ngModel)]="service.formData.preg11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="siempre11" value="0"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="casiSiempre11" value="1"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="algunasVeces11" value="2"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="casiNunca11" value="3"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="nunca11" value="4"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_11" id="invalido11" value="5"
+                            #pregunta_11="ngModel" [(ngModel)]="service.formData.pregunta_11" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">12. Las condiciones de mi vivienda me permiten descansar cuando lo
                         requiero </th>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="siempre12" value="0"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="casiSiempre12" value="1"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="algunasVeces12" value="2"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="casiNunca12" value="3"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="nunca12" value="4"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg12" id="invalido12" value="5"
-                            #preg12="ngModel" [(ngModel)]="service.formData.preg12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="siempre12" value="0"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="casiSiempre12" value="1"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="algunasVeces12" value="2"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="casiNunca12" value="3"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="nunca12" value="4"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_12" id="invalido12" value="5"
+                            #pregunta_12="ngModel" [(ngModel)]="service.formData.pregunta_12" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">13. Las condiciones de mi vivienda me permiten sentirme cómodo
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="siempre13" value="0"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="casiSiempre13" value="1"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="algunasVeces13" value="2"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="casiNunca13" value="3"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="nunca13" value="4"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg13" id="invalido13" value="5"
-                            #preg13="ngModel" [(ngModel)]="service.formData.preg13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="siempre13" value="0"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="casiSiempre13" value="1"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="algunasVeces13" value="2"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="casiNunca13" value="3"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="nunca13" value="4"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_13" id="invalido13" value="5"
+                            #pregunta_13="ngModel" [(ngModel)]="service.formData.pregunta_13" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">14. Me queda tiempo para actividades de recreación </th>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="siempre14" value="0"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="casiSiempre14" value="1"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="algunasVeces14" value="2"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="casiNunca14" value="3"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="nunca14" value="4"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg14" id="invalido14" value="5"
-                            #preg14="ngModel" [(ngModel)]="service.formData.preg14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="siempre14" value="0"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="casiSiempre14" value="1"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="algunasVeces14" value="2"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="casiNunca14" value="3"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="nunca14" value="4"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_14" id="invalido14" value="5"
+                            #pregunta_14="ngModel" [(ngModel)]="service.formData.pregunta_14" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">15. Fuera del trabajo tengo tiempo suficiente para descansar </th>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="siempre15" value="0"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="casiSiempre15" value="1"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="algunasVeces15" value="2"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="casiNunca15" value="3"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="nunca15" value="4"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg15" id="invalido15" value="5"
-                            #preg15="ngModel" [(ngModel)]="service.formData.preg15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="siempre15" value="0"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="casiSiempre15" value="1"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="algunasVeces15" value="2"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="casiNunca15" value="3"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="nunca15" value="4"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_15" id="invalido15" value="5"
+                            #pregunta_15="ngModel" [(ngModel)]="service.formData.pregunta_15" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">16. Tengo tiempo para atender mis asuntos personales y del hogar
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="siempre16" value="0"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="casiSiempre16" value="1"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="algunasVeces16" value="2"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="casiNunca16" value="3"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="nunca16" value="4"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg16" id="invalido16" value="5"
-                            #preg16="ngModel" [(ngModel)]="service.formData.preg16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="siempre16" value="0"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="casiSiempre16" value="1"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="algunasVeces16" value="2"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="casiNunca16" value="3"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="nunca16" value="4"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_16" id="invalido16" value="5"
+                            #pregunta_16="ngModel" [(ngModel)]="service.formData.pregunta_16" required /></td>
                 </tr>
 
                 <tr>
                     <th scope="row" class="pregForm1">17. Tengo tiempo para compartir con mi familia o amigos </th>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="siempre17" value="0"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="casiSiempre17" value="1"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="algunasVeces17" value="2"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="casiNunca17" value="3"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="nunca17" value="4"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg17" id="invalido17" value="5"
-                            #preg17="ngModel" [(ngModel)]="service.formData.preg17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="siempre17" value="0"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="casiSiempre17" value="1"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="algunasVeces17" value="2"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="casiNunca17" value="3"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="nunca17" value="4"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_17" id="invalido17" value="5"
+                            #pregunta_17="ngModel" [(ngModel)]="service.formData.pregunta_17" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">18. Tengo buena comunicación con las personas cercanas </th>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="siempr185" value="0"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="casiSiempre18" value="1"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="algunasVeces18" value="2"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="casiNunca18" value="3"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="nunca18" value="4"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg18" id="invalido18" value="5"
-                            #preg18="ngModel" [(ngModel)]="service.formData.preg18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="siempr185" value="0"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="casiSiempre18" value="1"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="algunasVeces18" value="2"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="casiNunca18" value="3"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="nunca18" value="4"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_18" id="invalido18" value="5"
+                            #pregunta_18="ngModel" [(ngModel)]="service.formData.pregunta_18" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">19. Las relaciones con mis amigos son buenas </th>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="siempre19" value="0"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="casiSiempre19" value="1"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="algunasVeces19" value="2"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="casiNunca19" value="3"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="nunca19" value="4"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg19" id="invalido19" value="5"
-                            #preg19="ngModel" [(ngModel)]="service.formData.preg19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="siempre19" value="0"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="casiSiempre19" value="1"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="algunasVeces19" value="2"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="casiNunca19" value="3"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="nunca19" value="4"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_19" id="invalido19" value="5"
+                            #pregunta_19="ngModel" [(ngModel)]="service.formData.pregunta_19" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">20. Converso con personas cercanas sobre diferentes temas </th>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="siempre20" value="0"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="casiSiempre20" value="1"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="algunasVeces20" value="2"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="casiNunca20" value="3"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="nunca20" value="4"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg20" id="invalido20" value="5"
-                            #preg20="ngModel" [(ngModel)]="service.formData.preg20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="siempre20" value="0"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="casiSiempre20" value="1"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="algunasVeces20" value="2"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="casiNunca20" value="3"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="nunca20" value="4"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_20" id="invalido20" value="5"
+                            #pregunta_20="ngModel" [(ngModel)]="service.formData.pregunta_20" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">21. Mis amigos están dispuestos a escucharme cuando tengo
                         problemas
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="siempre21" value="0"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="casiSiempre21" value="1"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="algunasVeces21" value="2"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="casiNunca21" value="3"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="nunca21" value="4"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg21" id="invalido21" value="5"
-                            #preg21="ngModel" [(ngModel)]="service.formData.preg21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="siempre21" value="0"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="casiSiempre21" value="1"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="algunasVeces21" value="2"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="casiNunca21" value="3"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="nunca21" value="4"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_21" id="invalido21" value="5"
+                            #pregunta_21="ngModel" [(ngModel)]="service.formData.pregunta_21" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">22. Cuento con el el apoyo de mi familia cuando tengo problemas
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="siempre22" value="0"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="casiSiempre22" value="1"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="algunasVeces22" value="2"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="casiNunca22" value="3"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="nunca22" value="4"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg22" id="invalido22" value="5"
-                            #preg22="ngModel" [(ngModel)]="service.formData.preg22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="siempre22" value="0"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="casiSiempre22" value="1"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="algunasVeces22" value="2"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="casiNunca22" value="3"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="nunca22" value="4"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_22" id="invalido22" value="5"
+                            #pregunta_22="ngModel" [(ngModel)]="service.formData.pregunta_22" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">23. Puedo hablar con personas cercanas sobre las cosas que me
                         pasan
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="siempre23" value="0"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="casiSiempre23" value="1"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="algunasVeces23" value="2"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="casiNunca23" value="3"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="nunca23" value="4"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg23" id="invalido23" value="5"
-                            #preg23="ngModel" [(ngModel)]="service.formData.preg23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="siempre23" value="0"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="casiSiempre23" value="1"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="algunasVeces23" value="2"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="casiNunca23" value="3"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="nunca23" value="4"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_23" id="invalido23" value="5"
+                            #pregunta_23="ngModel" [(ngModel)]="service.formData.pregunta_23" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">24. Mis problemas personales o familiares afectan mi trabajo </th>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="siempre24" value="4"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="casiSiempre24" value="3"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="algunasVeces24" value="2"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="casiNunca24" value="1"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="nunca24" value="0"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg24" id="invalido24" value="5"
-                            #preg24="ngModel" [(ngModel)]="service.formData.preg24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="siempre24" value="4"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="casiSiempre24" value="3"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="algunasVeces24" value="2"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="casiNunca24" value="1"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="nunca24" value="0"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_24" id="invalido24" value="5"
+                            #pregunta_24="ngModel" [(ngModel)]="service.formData.pregunta_24" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">25. La relación con mi familia cercana es cordial </th>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="siempre25" value="0"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="casiSiempre25" value="1"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="algunasVeces25" value="2"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="casiNunca25" value="3"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="nunca25" value="4"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg25" id="invalido25" value="5"
-                            #preg25="ngModel" [(ngModel)]="service.formData.preg25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="siempre25" value="0"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="casiSiempre25" value="1"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="algunasVeces25" value="2"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="casiNunca25" value="3"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="nunca25" value="4"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_25" id="invalido25" value="5"
+                            #pregunta_25="ngModel" [(ngModel)]="service.formData.pregunta_25" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">26. Mis problemas personales o familiares me quitan la energia que
                         necesito para trabajar </th>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="siempre26" value="4"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="casiSiempre26" value="3"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="algunasVeces26" value="2"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="casiNunca26" value="1"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="nunca26" value="0"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg26" id="invalido26" value="5"
-                            #preg26="ngModel" [(ngModel)]="service.formData.preg26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="siempre26" value="4"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="casiSiempre26" value="3"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="algunasVeces26" value="2"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="casiNunca26" value="1"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="nunca26" value="0"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_26" id="invalido26" value="5"
+                            #pregunta_26="ngModel" [(ngModel)]="service.formData.pregunta_26" required /></td>
                 </tr>
 
 
@@ -445,83 +453,83 @@
                     <th scope="row" class="pregForm1">27. Los problemas con mis familiares los resolvemos de manera
                         amistosa
                     </th>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="siempre27" value="0"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="casiSiempre27" value="1"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="algunasVeces27" value="2"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="casiNunca27" value="3"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="nunca27" value="4"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg27" id="invalido27" value="5"
-                            #preg27="ngModel" [(ngModel)]="service.formData.preg27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="siempre27" value="0"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="casiSiempre27" value="1"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="algunasVeces27" value="2"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="casiNunca27" value="3"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="nunca27" value="4"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_27" id="invalido27" value="5"
+                            #pregunta_27="ngModel" [(ngModel)]="service.formData.pregunta_27" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">28. Mis problemas personales o familiares afectan mis relaciones
                         en el
                         trabajo </th>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="siempre28" value="4"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="casiSiempre28" value="3"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="algunasVeces28" value="2"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="casiNunca28" value="1"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="nunca28" value="0"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg28" id="invalido28" value="5"
-                            #preg28="ngModel" [(ngModel)]="service.formData.preg28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="siempre28" value="4"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="casiSiempre28" value="3"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="algunasVeces28" value="2"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="casiNunca28" value="1"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="nunca28" value="0"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_28" id="invalido28" value="5"
+                            #pregunta_28="ngModel" [(ngModel)]="service.formData.pregunta_28" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">29. El dinero que ganamos en el hogar alcanza para cubrir los
                         gastos
                         basicos </th>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="siempre29" value="0"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="casiSiempre29" value="1"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="algunasVeces29" value="2"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="casiNunca29" value="3"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="nunca29" value="4"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg29" id="invalido29" value="5"
-                            #preg29="ngModel" [(ngModel)]="service.formData.preg29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="siempre29" value="0"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="casiSiempre29" value="1"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="algunasVeces29" value="2"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="casiNunca29" value="3"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="nunca29" value="4"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_29" id="invalido29" value="5"
+                            #pregunta_29="ngModel" [(ngModel)]="service.formData.pregunta_29" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">30. Tengo otros compromisos economicos que afectan mucho el
                         presupuesto familiar </th>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="siempre30" value="4"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="casiSiempre30" value="3"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="algunasVeces30" value="2"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="casiNunca30" value="1"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="nunca30" value="0"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg30" id="invalido30" value="5"
-                            #preg30="ngModel" [(ngModel)]="service.formData.preg30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="siempre30" value="4"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="casiSiempre30" value="3"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="algunasVeces30" value="2"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="casiNunca30" value="1"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="nunca30" value="0"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_30" id="invalido30" value="5"
+                            #pregunta_30="ngModel" [(ngModel)]="service.formData.pregunta_30" required /></td>
                 </tr>
                 <tr>
                     <th scope="row" class="pregForm1">31. En mi hogar tenemos deudas dificiles de pagar </th>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="siempre31" value="4"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="casiSiempre31" value="3"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="algunasVeces31" value="2"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="casiNunca31" value="1"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="nunca31" value="0"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
-                    <td><input class="form-check-input" type="radio" name="preg31" id="invalido31" value="5"
-                            #preg31="ngModel" [(ngModel)]="service.formData.preg31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="siempre31" value="4"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="casiSiempre31" value="3"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="algunasVeces31" value="2"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="casiNunca31" value="1"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="nunca31" value="0"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
+                    <td><input class="form-check-input" type="radio" name="pregunta_31" id="invalido31" value="5"
+                            #pregunta_31="ngModel" [(ngModel)]="service.formData.pregunta_31" required /></td>
                 </tr>
 
             </tbody>

@@ -23,29 +23,26 @@
     <form novalidate autocomplete="off" class="formulario" #form="ngForm" (submit)="onSubmit(form)">
         <div class="form-group">
             <label>0. Cedula</label>
-            <input type="text" class="form-control form-control-lg"  name="cedula" required
-                #cedula="ngModel" [(ngModel)]="service.formData.cedula" [class.invalid]="cedula.invalid && cedula.touched" maxlength="15" minlength="8">
+            <input type="text" class="form-control form-control-lg" name="cedula" required #cedula="ngModel"
+                [(ngModel)]="service.formData.cedula" [class.invalid]="cedula.invalid && cedula.touched" maxlength="10"
+                minlength="8">
         </div>
 
         <div class="row">
             <div class="form-group col-md-6">
                 <label>Fecha de Aplicación</label>
                 <input type="date" class="form-control form-control-lg" placeholder="Fecha de Aplicacion"
-                    name="fechaAplicacion" required maxlength="20" minlength="20" #fechaAplicacion="ngModel"
-                    [(ngModel)]="service.formData.fechaAplicacion">
-            </div>
-
-            <div class="form-group col-md-6">
-                <!-- <label>Número de Identificación del Correspondiente</label>-->
-                <input type="hidden" class="form-control form-control-lg" placeholder="MM/YY" name="expirationDate"
-                    maxlength="5" minlength="5">
+                    name="fechaAplicacion" required maxlength="10" #fechaAplicacion="ngModel"
+                    [(ngModel)]="service.formData.fechaAplicacion"
+                    [class.invalid]="fechaAplicacion.invalid && fechaAplicacion.touched">
             </div>
         </div>
 
         <div class="form-group">
             <label>1. Nombre Completo</label>
             <input type="text" class="form-control form-control-lg" placeholder="" name="nombreCompleto" required
-                #nombreCompleto="ngModel" [(ngModel)]="service.formData.nombreCompleto">
+                #nombreCompleto="ngModel" [(ngModel)]="service.formData.nombreCompleto" minlength="1" maxlength="150"
+                [class.invalid]="nombreCompleto.invalid && nombreCompleto.touched">
         </div>
 
         <div class="row">
@@ -62,14 +59,15 @@
                 <label>3. Fecha de Nacimiento </label> <br>
                 <input type="date" id="start" name="anioNacimiento" class="form-control form-control-lg"
                     value="2018-07-22" min="1930-01-01" max="2020-01-01" value="" required #anioNacimiento="ngModel"
-                    [(ngModel)]="service.formData.anioNacimiento">
+                    [(ngModel)]="service.formData.anioNacimiento"
+                    [class.invalid]="anioNacimiento.invalid && anioNacimiento.touched">
             </div>
         </div>
 
 
         <div class="row form-group divEstadoCivil col-md-12">
             <label>4. Estado Civil</label>
-            <select name="estadoCivil" class="selectEstadoCivil col-md-12 form-control form-control-lg" required
+            <select name="estadoCivil" class="selectEstadoCivil col-md-12 form-control form-control-lg"
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.estadoCivil">
                 <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let estado of EstadoCivil">{{estado}}</option>
@@ -78,7 +76,7 @@
 
         <div class="row form-group divEstudio col-md-12">
             <label>5. Último grado de estudios que alcanzó</label>
-            <select name="nivelDeEstudios" class="selectEstudio col-md-12 form-control form-control-lg" required
+            <select name="nivelDeEstudios" class="selectEstudio col-md-12 form-control form-control-lg"
                 #estadoCivil="ngModel" [(ngModel)]="service.formData.nivelDeEstudios">
                 <option disabled value="" selected>Seleccionar</option>
                 <option *ngFor="let estudio of GradoEstudio">{{estudio}}</option>
@@ -91,12 +89,15 @@
             <div class="form-group col-md-6 divDepartamento">
                 <label>Departamento</label>
                 <input type="text" class="form-control form-control-lg" placeholder="" name="depaResidencia" required
-                    #depaResidencia="ngModel" [(ngModel)]="service.formData.depaResidencia">
+                    minlength="1" maxlength="50" #depaResidencia="ngModel" [(ngModel)]="service.formData.depaResidencia"
+                    required [class.invalid]="depaResidencia.invalid && depaResidencia.touched">
             </div>
             <div class="form-group col-md-6 divMunicipio">
                 <label>Ciudad/Municipio</label>
                 <input type="text" class="form-control form-control-lg" placeholder="" name="ciudadResidencia" required
-                    #ciudadResidencia="ngModel" [(ngModel)]="service.formData.ciudadResidencia ">
+                    minlength="1" maxlength="50" #ciudadResidencia="ngModel"
+                    [(ngModel)]="service.formData.ciudadResidencia " required
+                    [class.invalid]="ciudadResidencia.invalid && ciudadResidencia.touched">
             </div>
         </div>
 
@@ -137,12 +138,15 @@
             <div class="form-group col-md-6 divDepartamentoTrabajo">
                 <label>Departamento</label>
                 <input type="text" class="form-control form-control-lg" name="departamentoTrabajo" required
-                    #departamentoTrabajo="ngModel" [(ngModel)]="service.formData.departamentoTrabajo">
+                    minlength="1" maxlength="50" #departamentoTrabajo="ngModel"
+                    [(ngModel)]="service.formData.departamentoTrabajo"
+                    [class.invalid]="departamentoTrabajo.invalid && departamentoTrabajo.touched">
             </div>
             <div class="form-group col-md-6 divMunicipioTrabajo">
                 <label>Ciudad/Municipio</label>
-                <input type="text" class="form-control form-control-lg" name="ciudadTrabajo" required
-                    #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo">
+                <input type="text" class="form-control form-control-lg" name="ciudadTrabajo" required minlength="1"
+                    maxlength="50" #ciudadTrabajo="ngModel" [(ngModel)]="service.formData.ciudadTrabajo"
+                    [class.invalid]="ciudadTrabajo.invalid && ciudadTrabajo.touched">
             </div>
         </div>
 
@@ -159,7 +163,8 @@
         <div class="row form-group divEstadoCivil col-md-12">
             <label>13. ¿Cuál es el nombre del cargo que desempeña en la empresa?</label>
             <input type="text" class="form-control form-control-lg" name="cargoActual" required #cargoActual="ngModel"
-                [(ngModel)]="service.formData.cargoActual">
+                [(ngModel)]="service.formData.cargoActual" [class.invalid]="cargoActual.invalid && cargoActual.touched"
+                minlength="1" maxlength="20">
         </div>
 
 
@@ -226,7 +231,7 @@
 
 
         <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
-            <button class="btn btn-info btn-lg btn-block col-md-12" type="submit">
+            <button class="btn btn-info btn-lg btn-block col-md-12" type="submit" [disabled]="form.invalid">
                 Submit
             </button>
         </div>
